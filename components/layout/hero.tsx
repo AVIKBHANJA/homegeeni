@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -14,23 +14,31 @@ export function Hero() {
       <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight animate-fade-in">
-            Your Home Improvement <span className="text-accent">Journey</span> Starts Here
+            Your Home Improvement <span className="text-accent">Journey</span>{" "}
+            Starts Here
           </h1>
 
           <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto animate-fade-in-delay-1">
-            Expert tips, maintenance guides, and innovative solutions to transform your home into the perfect living
-            space.
+            Expert tips, maintenance guides, and innovative solutions to
+            transform your home into the perfect living space.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
             <Link href="/blog">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg homegeeni-btn">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 shadow-lg homegeeni-btn"
+              >
                 Explore Articles
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Link href="https://www.homegeeni.com">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 homegeeni-btn">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 homegeeni-btn"
+              >
                 Visit HomeGeeni
               </Button>
             </Link>
@@ -60,10 +68,14 @@ export function Hero() {
 
       {/* Wave divider */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 120"
+          fill="white"
+        >
           <path d="M0,96L80,80C160,64,320,32,480,21.3C640,11,800,21,960,42.7C1120,64,1280,96,1360,112L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
         </svg>
       </div>
     </section>
-  )
+  );
 }

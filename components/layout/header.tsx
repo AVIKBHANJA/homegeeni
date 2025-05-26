@@ -66,7 +66,11 @@ export function Header() {
               </>
             ) : (
               <Link href="/login" className="hidden md:block">
-                <Button variant="outline" size="sm" className="shadow-sm homegeeni-btn">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="shadow-sm homegeeni-btn"
+                >
                   <User className="h-4 w-4 mr-2" />
                   Login
                 </Button>

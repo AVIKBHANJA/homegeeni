@@ -1,12 +1,18 @@
-import { Suspense } from "react"
-import { BlogList } from "@/components/blog/blog-list"
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
-import { Hero } from "@/components/layout/hero"
-import { LoadingSpinner } from "@/components/ui/loading-spinner"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ArrowRight, Lightbulb, PenToolIcon as Tool, HomeIcon, TrendingUp } from "lucide-react"
+import { Suspense } from "react";
+import { BlogList } from "@/components/blog/blog-list";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { Hero } from "@/components/layout/hero";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Lightbulb,
+  PenToolIcon as Tool,
+  HomeIcon,
+  TrendingUp,
+} from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -19,10 +25,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
-              <span className="gradient-text">Explore</span> Home Improvement Categories
+              <span className="gradient-text">Explore</span> Home Improvement
+              Categories
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover expert advice across our most popular home improvement topics
+              Discover expert advice across our most popular home improvement
+              topics
             </p>
           </div>
 
@@ -32,9 +40,15 @@ export default function HomePage() {
                 <HomeIcon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Maintenance</h3>
-              <p className="text-gray-600 mb-4">Essential tips to keep your home in perfect condition year-round.</p>
+              <p className="text-gray-600 mb-4">
+                Essential tips to keep your home in perfect condition
+                year-round.
+              </p>
               <Link href="/blog?category=maintenance">
-                <Button variant="link" className="p-0 h-auto font-medium text-primary homegeeni-link">
+                <Button
+                  variant="link"
+                  className="p-0 h-auto font-medium text-primary homegeeni-link"
+                >
                   View Articles <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
@@ -45,9 +59,14 @@ export default function HomePage() {
                 <Tool className="h-6 w-6 text-accent" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Renovation</h3>
-              <p className="text-gray-600 mb-4">Transform your living spaces with our expert renovation guides.</p>
+              <p className="text-gray-600 mb-4">
+                Transform your living spaces with our expert renovation guides.
+              </p>
               <Link href="/blog?category=renovation">
-                <Button variant="link" className="p-0 h-auto font-medium text-accent homegeeni-link">
+                <Button
+                  variant="link"
+                  className="p-0 h-auto font-medium text-accent homegeeni-link"
+                >
                   View Articles <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
@@ -58,9 +77,14 @@ export default function HomePage() {
                 <Lightbulb className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">DIY Projects</h3>
-              <p className="text-gray-600 mb-4">Hands-on projects to improve your home on any budget.</p>
+              <p className="text-gray-600 mb-4">
+                Hands-on projects to improve your home on any budget.
+              </p>
               <Link href="/blog?category=diy">
-                <Button variant="link" className="p-0 h-auto font-medium text-primary homegeeni-link">
+                <Button
+                  variant="link"
+                  className="p-0 h-auto font-medium text-primary homegeeni-link"
+                >
                   View Articles <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
@@ -71,9 +95,14 @@ export default function HomePage() {
                 <TrendingUp className="h-6 w-6 text-accent" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Tips & Tricks</h3>
-              <p className="text-gray-600 mb-4">Smart solutions and insights for everyday home care.</p>
+              <p className="text-gray-600 mb-4">
+                Smart solutions and insights for everyday home care.
+              </p>
               <Link href="/blog?category=tips">
-                <Button variant="link" className="p-0 h-auto font-medium text-accent homegeeni-link">
+                <Button
+                  variant="link"
+                  className="p-0 h-auto font-medium text-accent homegeeni-link"
+                >
                   View Articles <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
@@ -87,8 +116,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900">Latest Articles</h2>
-              <p className="text-lg text-gray-600 mt-2">Fresh insights and expert advice for your home</p>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Latest Articles
+              </h2>
+              <p className="text-lg text-gray-600 mt-2">
+                Fresh insights and expert advice for your home
+              </p>
             </div>
             <Link href="/blog">
               <Button variant="outline" className="hidden md:flex">
@@ -117,9 +150,12 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated with HomeGeeni</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Stay Updated with HomeGeeni
+            </h2>
             <p className="text-xl opacity-90 mb-8">
-              Subscribe to our newsletter for the latest home improvement tips, guides, and exclusive content.
+              Subscribe to our newsletter for the latest home improvement tips,
+              guides, and exclusive content.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
@@ -128,7 +164,9 @@ export default function HomePage() {
                 placeholder="Enter your email"
                 className="px-4 py-3 rounded-lg flex-grow text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <Button className="bg-white text-primary hover:bg-white/90">Subscribe</Button>
+              <Button className="bg-white text-primary hover:bg-white/90">
+                Subscribe
+              </Button>
             </div>
           </div>
         </div>
@@ -136,5 +174,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  );
 }
