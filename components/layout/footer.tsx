@@ -60,8 +60,7 @@ export function Footer() {
               About HomeGeeni
             </h3>
             <p className="text-gray-500 mb-6">
-              We're passionate about helping homeowners create spaces they love
-              through expert advice and practical solutions.
+              HomeGeeni is an AI-powered real estate platform that simplifies home buying, selling, and investing by automating listings, offers, and insights—all in one place.
             </p>
             <div className="flex space-x-3">
               <a
