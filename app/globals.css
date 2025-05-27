@@ -4,54 +4,52 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    /* HomeGeeni blue */
-    --primary: 220 90% 45%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    /* HomeGeeni orange */
-    --accent: 35 100% 55%;
-    --accent-foreground: 210 40% 98%;
+    --popover-foreground: 240 10% 3.9%;
+    /* Joy purple */
+    --primary: 270 76% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    /* Joy pink */
+    --accent: 346 77% 49%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    /* HomeGeeni blue */
-    --ring: 220 90% 45%;
-    --radius: 0.75rem;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 270 76% 53%;
+    --radius: 1rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    /* HomeGeeni blue - brighter for dark mode */
-    --primary: 220 90% 55%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    /* HomeGeeni orange - brighter for dark mode */
-    --accent: 35 100% 60%;
-    --accent-foreground: 210 40% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    /* Joy purple - brighter for dark mode */
+    --primary: 270 76% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    /* Joy pink - brighter for dark mode */
+    --accent: 346 77% 55%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    /* HomeGeeni blue */
-    --ring: 220 90% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 270 76% 60%;
   }
 }
 
@@ -170,70 +168,110 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* HomeGeeni specific styles */
-.homegeeni-btn {
+/* Joy specific styles */
+.joy-btn {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  border-radius: var(--radius);
+  font-weight: 500;
 }
 
-.homegeeni-btn::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    hsl(var(--primary)),
-    hsl(var(--accent))
-  );
-  transition: width 0.3s ease;
+.joy-btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
-.homegeeni-btn:hover::after {
-  width: 100%;
+.joy-btn-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
 }
 
-/* HomeGeeni animated link */
-.homegeeni-link {
+.joy-btn-accent {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.joy-btn-accent:hover {
+  background-color: hsl(var(--accent) / 0.9);
+}
+
+.joy-btn-outline {
+  border: 2px solid hsl(var(--primary) / 0.2);
+  background-color: transparent;
+  color: hsl(var(--primary));
+  transition: all 0.3s ease;
+}
+
+.joy-btn-outline:hover {
+  background-color: hsl(var(--primary) / 0.1);
+  border-color: hsl(var(--primary));
+}
+
+/* Joy link styles */
+.joy-link {
   position: relative;
+  font-weight: 500;
+  color: hsl(var(--primary));
+  transition: color 0.2s ease;
 }
 
-.homegeeni-link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background: linear-gradient(
-    to right,
-    hsl(var(--primary)),
-    hsl(var(--accent))
-  );
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: bottom right;
+.joy-link:hover {
+  color: hsl(var(--accent));
 }
 
-.homegeeni-link:hover::after {
-  transform-origin: bottom left;
-  transform: scaleX(1);
-}
-
-/* HomeGeeni card style */
-.homegeeni-card {
-  border: 1px solid hsl(var(--border));
+/* Joy card style */
+.joy-card {
   border-radius: var(--radius);
   overflow: hidden;
   transition: all 0.3s ease;
+  background: white;
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.homegeeni-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(var(--primary), 0.1),
-    0 4px 6px -2px rgba(var(--accent), 0.05);
-  border-color: hsl(var(--primary) / 0.3);
+.joy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Wave divider */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Special sections */
+.joy-section {
+  position: relative;
+  padding: 5rem 0;
+}
+
+/* Circle background decoration */
+.circle-bg {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.2),
+    hsl(var(--accent) / 0.2)
+  );
+  z-index: 0;
+}
+
+.circle-bg-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+}
+
+.circle-bg-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
 }

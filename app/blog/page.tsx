@@ -25,25 +25,25 @@ export default async function BlogPage({
   const readTime = typeof params.readTime === "string" ? params.readTime : "";
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Header />
 
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-4">
-            <img
-              src="/logo.png"
-              alt="HomeGeeni Logo"
-              className="h-12 inline-block mr-2"
-            />{" "}
-            Blog
-          </h1>
-          <p className="text-lg text-gray-600">
-            Discover expert tips, maintenance guides, and innovative solutions
-            for your home
-          </p>
+      <div className="bg-gradient-to-br from-primary/5 to-accent/5 pt-20 pb-16 relative overflow-hidden">
+        <div className="circle-bg circle-bg-1 opacity-20"></div>
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              Our <span className="text-primary">Home Improvement</span> Blog
+            </h1>
+            <p className="text-xl text-gray-600 md:px-12">
+              Discover expert tips, maintenance guides, and innovative solutions
+              for your home transformation journey
+            </p>
+          </div>
         </div>
+      </div>
 
+      <main className="container mx-auto px-4 py-12 -mt-8">
         <BlogSearch
           initialQuery={query}
           initialCategory={category}
