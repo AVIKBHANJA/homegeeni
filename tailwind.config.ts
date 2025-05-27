@@ -27,6 +27,16 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
+          50: "hsl(var(--primary) / 0.05)",
+          100: "hsl(var(--primary) / 0.1)",
+          200: "hsl(var(--primary) / 0.2)",
+          300: "hsl(var(--primary) / 0.3)",
+          400: "hsl(var(--primary) / 0.4)",
+          500: "hsl(var(--primary))",
+          600: "hsl(210 100% 35%)",
+          700: "hsl(210 100% 30%)",
+          800: "hsl(210 100% 25%)",
+          900: "hsl(210 100% 20%)",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -43,6 +53,16 @@ const config: Config = {
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
+          50: "hsl(var(--accent) / 0.05)",
+          100: "hsl(var(--accent) / 0.1)",
+          200: "hsl(var(--accent) / 0.2)",
+          300: "hsl(var(--accent) / 0.3)",
+          400: "hsl(var(--accent) / 0.4)",
+          500: "hsl(var(--accent))",
+          600: "hsl(28 100% 49%)",
+          700: "hsl(28 100% 44%)",
+          800: "hsl(28 100% 39%)",
+          900: "hsl(28 100% 34%)",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {

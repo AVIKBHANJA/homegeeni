@@ -1,4 +1,5 @@
 import type { BlogPost } from "./types"
+import { getStandardAuthor, standardizeAuthor } from "./author-helper"
 
 // Mock data - replace with actual database calls
 const mockPosts: BlogPost[] = [
@@ -338,13 +339,18 @@ const mockPosts: BlogPost[] = [
 export async function getBlogPosts(): Promise<BlogPost[]> {
   // Simulate API delay
   await new Promise((resolve) => setTimeout(resolve, 500))
-  return mockPosts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+  // Apply standard HomeGeeni authorship to all posts
+  return mockPosts
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .map(post => standardizeAuthor(post))
 }
 
 export async function getBlogPost(id: string): Promise<BlogPost | null> {
   // Simulate API delay
   await new Promise((resolve) => setTimeout(resolve, 300))
-  return mockPosts.find((post) => post.id === id) || null
+  const post = mockPosts.find((post) => post.id === id)
+  // Apply standard HomeGeeni authorship if post exists
+  return post ? standardizeAuthor(post) : null
 }
 
 export async function createBlogPost(
@@ -359,10 +365,11 @@ export async function createBlogPost(
     publishedAt: new Date().toISOString(),
     views: 0,
     readTime: Math.ceil(post.content.split(" ").length / 200), // Estimate reading time
+    author: getStandardAuthor() // Ensure all new posts have HomeGeeni as author
   }
 
   mockPosts.unshift(newPost)
-  return newPost
+  return standardizeAuthor(newPost)
 }
 
 export async function searchBlogPosts(
@@ -412,5 +419,6 @@ export async function searchBlogPosts(
     filteredPosts.sort((a, b) => (b.views || 0) - (a.views || 0))
   }
 
-  return filteredPosts
+  // Apply standard HomeGeeni authorship to all filtered posts
+  return filteredPosts.map(post => standardizeAuthor(post))
 }

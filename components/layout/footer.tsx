@@ -256,15 +256,46 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Legal Policy Highlights */}
+      <div className="bg-gray-50 py-8 border-t border-gray-100">
+        <div className="container mx-auto px-4">
+          <h3 className="text-lg font-medium mb-6 text-center text-gray-800">
+            HomeGeeni Fair Housing and Equal Opportunity Policy
+          </h3>
+          <div className="text-sm text-gray-600 mb-6 text-center">
+            <p>
+              HomeGeeni proudly supports and abides by the Fair Housing Act and
+              all applicable housing laws.
+            </p>
+            <p className="mt-2">
+              We are committed to ensuring equal access to housing opportunities
+              regardless of race, color, religion, sex, disability, familial
+              status, national origin, or any other protected class.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Link href="/fair-housing-policy">
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-primary border-primary hover:bg-primary/10"
+              >
+                Read Our Full Fair Housing Policy
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* Copyright */}
       <div className="py-6 border-t border-gray-100">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; 2024{" "}
-            <span className="text-primary font-medium">HomeGeeni Blog</span>.
-            All rights reserved.
+            &copy; 2025{" "}
+            <span className="text-primary font-medium">HomeGeeni, LLC</span>.
+            All rights reserved. California DRE #01521930
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
             <Link
               href="/privacy"
               className="text-gray-500 hover:text-primary text-sm"
@@ -275,7 +306,13 @@ export function Footer() {
               href="/terms"
               className="text-gray-500 hover:text-primary text-sm"
             >
-              Terms of Service
+              Terms of Use
+            </Link>
+            <Link
+              href="/fair-housing-policy"
+              className="text-gray-500 hover:text-primary text-sm"
+            >
+              Fair Housing
             </Link>
             <Link
               href="/sitemap"

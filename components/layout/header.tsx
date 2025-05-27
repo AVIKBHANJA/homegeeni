@@ -3,12 +3,21 @@
 import Link from "next/link";
 import { useAuth } from "@/components/auth/auth-provider";
 import { Button } from "@/components/ui/button";
-import { Home, PenTool, LogOut, User, Menu, X } from "lucide-react";
+import {
+  Home,
+  PenTool,
+  LogOut,
+  User,
+  Menu,
+  X,
+  ChevronDown,
+} from "lucide-react";
 import { useState } from "react";
 
 export function Header() {
   const { user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
 
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
@@ -37,6 +46,50 @@ export function Header() {
             >
               Tips & Tricks
             </Link>
+
+            <div className="relative">
+              <button
+                onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
+                className="text-gray-700 hover:text-primary transition-colors font-medium joy-link flex items-center"
+              >
+                About
+                <ChevronDown className="h-4 w-4 ml-1" />
+              </button>
+
+              {aboutDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-60 bg-white shadow-lg rounded-md py-2 z-50">
+                  <Link
+                    href="/terms"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary"
+                    onClick={() => setAboutDropdownOpen(false)}
+                  >
+                    Terms of Use
+                  </Link>
+                  <Link
+                    href="/privacy"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary"
+                    onClick={() => setAboutDropdownOpen(false)}
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link
+                    href="/fair-housing-policy"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary"
+                    onClick={() => setAboutDropdownOpen(false)}
+                  >
+                    Fair Housing Policy
+                  </Link>
+                  <Link
+                    href="/ai-recommendations"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary"
+                    onClick={() => setAboutDropdownOpen(false)}
+                  >
+                    AI Recommendations
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link
               href="https://www.homegeeni.com"
               className="text-gray-700 hover:text-primary transition-colors font-medium joy-link"
@@ -118,6 +171,41 @@ export function Header() {
             >
               Tips & Tricks
             </Link>
+
+            <div className="py-3 px-4">
+              <p className="text-gray-700 font-medium mb-2">About HomeGeeni</p>
+              <div className="pl-4 space-y-2">
+                <Link
+                  href="/terms"
+                  className="block py-2 text-gray-600 hover:text-primary text-sm transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Terms of Use
+                </Link>
+                <Link
+                  href="/privacy"
+                  className="block py-2 text-gray-600 hover:text-primary text-sm transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/fair-housing-policy"
+                  className="block py-2 text-gray-600 hover:text-primary text-sm transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Fair Housing Policy
+                </Link>
+                <Link
+                  href="/ai-recommendations"
+                  className="block py-2 text-gray-600 hover:text-primary text-sm transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  AI Recommendations
+                </Link>
+              </div>
+            </div>
+
             <Link
               href="https://www.homegeeni.com"
               className="block py-3 px-4 text-gray-700 hover:text-primary rounded-lg transition-colors font-medium"

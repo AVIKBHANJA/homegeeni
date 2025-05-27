@@ -65,7 +65,7 @@ export function BlogCard({ post }: BlogCardProps) {
             <div className="text-sm font-medium text-gray-800">
               {post.author}
             </div>
-            <div className="text-xs text-gray-500">Home Expert</div>
+            <div className="text-xs text-gray-500">Official Blog</div>
           </div>
           <Link
             href={`/blog/${slug}/${post.id}`}

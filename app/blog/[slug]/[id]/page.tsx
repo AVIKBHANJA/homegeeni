@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getBlogPost } from "@/lib/blog-data";
+import { getStandardAuthor } from "@/lib/author-helper";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CategoryBadge } from "@/components/blog/category-badge";
@@ -122,9 +123,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </div>
                   <div>
                     <div className="font-medium text-lg">{post.author}</div>
-                    <div className="text-sm text-gray-500">
-                      Home Improvement Expert
-                    </div>
+                    <div className="text-sm text-gray-500">Official Blog</div>
                   </div>
                 </div>
 
@@ -196,6 +195,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     >
                       Read Article <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
+                    <div className="flex items-center mt-2 text-xs text-gray-500">
+                      <User className="h-3 w-3 mr-1" />
+                      <span>{getStandardAuthor()}</span>
+                    </div>
                   </div>
                 </div>
                 <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 flex hover:shadow-md transition-shadow group">
@@ -222,6 +225,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     >
                       Read Article <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
+                    <div className="flex items-center mt-2 text-xs text-gray-500">
+                      <User className="h-3 w-3 mr-1" />
+                      <span>{getStandardAuthor()}</span>
+                    </div>
                   </div>
                 </div>
               </div>

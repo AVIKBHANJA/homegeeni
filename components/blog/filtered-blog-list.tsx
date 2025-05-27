@@ -2,6 +2,7 @@ import { BlogCard } from "./blog-card";
 import { getBlogPosts } from "@/lib/blog-data";
 import { Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ResetFiltersButton } from "./reset-filters-button";
 
 interface FilteredBlogListProps {
   query?: string;
@@ -78,13 +79,7 @@ export async function FilteredBlogList({
           Try adjusting your search or filter criteria to find what you're
           looking for.
         </p>
-        <Button
-          variant="outline"
-          onClick={() => (window.location.href = "/blog")}
-          className="rounded-full px-6 py-2 border-gray-200 hover:border-primary hover:bg-primary/5"
-        >
-          Reset All Filters
-        </Button>
+        <ResetFiltersButton />
       </div>
     );
   }

@@ -5,51 +5,51 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 200 13% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 200 13% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    /* Joy purple */
-    --primary: 270 76% 53%;
+    --popover-foreground: 200 13% 3.9%;
+    /* HomeGeeni blue */
+    --primary: 210 100% 40%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    /* Joy pink */
-    --accent: 346 77% 49%;
+    --secondary: 215 94% 94%;
+    --secondary-foreground: 210 13% 10%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 9% 46%;
+    /* HomeGeeni orange accent */
+    --accent: 28 100% 54%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 270 76% 53%;
-    --radius: 1rem;
+    --border: 204 20% 90%;
+    --input: 204 20% 90%;
+    --ring: 210 100% 40%;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 200 50% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 200 50% 3.9%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
+    --popover: 200 50% 3.9%;
     --popover-foreground: 0 0% 98%;
-    /* Joy purple - brighter for dark mode */
-    --primary: 270 76% 60%;
+    /* HomeGeeni blue - brighter for dark mode */
+    --primary: 210 80% 50%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 210 15% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    /* Joy pink - brighter for dark mode */
-    --accent: 346 77% 55%;
+    --muted: 210 15% 15.9%;
+    --muted-foreground: 210 10% 70%;
+    /* HomeGeeni orange accent - brighter for dark mode */
+    --accent: 25 95% 60%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 270 76% 60%;
+    --border: 200 15% 15.9%;
+    --input: 200 15% 15.9%;
+    --ring: 210 80% 50%;
   }
 }
 
@@ -154,7 +154,7 @@
 
 /* Gradient text */
 .gradient-text {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent;
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-accent;
 }
 
 /* Card hover effects */
@@ -168,7 +168,7 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Joy specific styles */
+/* HomeGeeni specific styles */
 .joy-btn {
   position: relative;
   overflow: hidden;
@@ -180,19 +180,25 @@
 .joy-btn-primary {
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.25);
 }
 
 .joy-btn-primary:hover {
-  background-color: hsl(var(--primary) / 0.9);
+  background-color: hsl(210 100% 35%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsl(var(--primary) / 0.3);
 }
 
 .joy-btn-accent {
   background-color: hsl(var(--accent));
   color: hsl(var(--accent-foreground));
+  box-shadow: 0 4px 12px hsl(var(--accent) / 0.25);
 }
 
 .joy-btn-accent:hover {
-  background-color: hsl(var(--accent) / 0.9);
+  background-color: hsl(28 100% 49%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsl(var(--accent) / 0.3);
 }
 
 .joy-btn-outline {
@@ -207,7 +213,7 @@
   border-color: hsl(var(--primary));
 }
 
-/* Joy link styles */
+/* HomeGeeni link styles */
 .joy-link {
   position: relative;
   font-weight: 500;
@@ -217,9 +223,25 @@
 
 .joy-link:hover {
   color: hsl(var(--accent));
+  text-decoration-color: hsl(var(--primary) / 0.4);
 }
 
-/* Joy card style */
+.joy-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: hsl(var(--primary));
+  transition: width 0.3s ease;
+}
+
+.joy-link:hover::after {
+  width: 100%;
+}
+
+/* HomeGeeni card style */
 .joy-card {
   border-radius: var(--radius);
   overflow: hidden;
@@ -231,7 +253,8 @@
 
 .joy-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px hsl(var(--primary) / 0.1);
+  border-color: hsl(var(--primary) / 0.3);
 }
 
 /* Wave divider */
