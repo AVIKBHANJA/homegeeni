@@ -24,12 +24,11 @@ export function Footer() {
               <img src="/logo.png" alt="HomeGeeni Logo" className="h-12" />
             </div>
             <h2 className="text-3xl font-light mb-4 text-gray-800">
-              Transform your living space with{" "}
-              <span className="font-medium text-primary">expert insights</span>
+              Real Estate AI for{" "}
+              <span className="font-medium text-primary">Agents, Buyers, and Sellers</span>
             </h2>
             <p className="text-gray-500 mb-6">
-              Your trusted source for home improvement tips and professional
-              guidance to make your home dreams a reality.
+              Send Offers. Get Valuations. Manage Docs & Showings. AI assisted Search.
             </p>
           </div>
 
