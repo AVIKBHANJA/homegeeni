@@ -25,10 +25,13 @@ export function Footer() {
             </div>
             <h2 className="text-3xl font-light mb-4 text-gray-800">
               Real Estate AI for{" "}
-              <span className="font-medium text-primary">Agents, Buyers, and Sellers</span>
+              <span className="font-medium text-primary">
+                Agents, Buyers, and Sellers
+              </span>
             </h2>
             <p className="text-gray-500 mb-6">
-              Send Offers. Get Valuations. Manage Docs & Showings. AI assisted Search.
+              Send Offers. Get Valuations. Manage Docs & Showings. AI assisted
+              Search.
             </p>
           </div>
 
@@ -37,7 +40,8 @@ export function Footer() {
               Subscribe to our newsletter
             </h3>
             <p className="text-gray-500 mb-4">
-              Get the latest home improvement tips directly to your inbox
+              Get AI-powered market insights and property updates directly to
+              your inbox
             </p>
             <div className="flex">
               <input
@@ -59,7 +63,9 @@ export function Footer() {
               About HomeGeeni
             </h3>
             <p className="text-gray-500 mb-6">
-              HomeGeeni is an AI-powered real estate platform that simplifies home buying, selling, and investing by automating listings, offers, and insights—all in one place.
+              HomeGeeni is an AI-powered real estate platform that simplifies
+              home buying, selling, and investing by automating listings,
+              offers, and insights—all in one place.
             </p>
             <div className="flex space-x-3">
               <a
@@ -108,25 +114,25 @@ export function Footer() {
                   href="/blog"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  All Posts
+                  Blogs
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/trends"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  About Us
+                  Market Trends
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/valuation"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  Contact
+                  AI Valuation
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
@@ -135,7 +141,7 @@ export function Footer() {
                   href="https://www.homegeeni.com"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  HomeGeeni
+                  Platform
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
@@ -143,52 +149,50 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-medium mb-6 text-gray-800">
-              Categories
-            </h3>
+            <h3 className="text-lg font-medium mb-6 text-gray-800">Services</h3>
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/blog?category=maintenance"
+                  href="/blog?category=buying"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  Maintenance
+                  Home Buying
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/blog?category=renovation"
+                  href="/blog?category=selling"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  Renovation
+                  Home Selling
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/blog?category=diy"
+                  href="/blog?category=investing"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  DIY Projects
+                  Real Estate Investing
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/blog?category=tips"
+                  href="/blog?category=ai-insights"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  Tips & Tricks
+                  AI Insights
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/blog?category=seasonal"
+                  href="/blog?category=market-trends"
                   className="text-gray-500 hover:text-primary transition-colors flex items-center group"
                 >
-                  Seasonal Care
+                  Market Analysis
                   <ArrowRight className="h-3.5 w-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-all" />
                 </Link>
               </li>
@@ -281,6 +285,31 @@ export function Footer() {
                 Read Our Full Fair Housing Policy
               </Button>
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* AI Disclaimer */}
+      <div className="py-6 bg-gray-50 border-t border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="bg-white rounded-lg p-6 border border-gray-200">
+            <h3 className="text-lg font-medium mb-3 text-gray-800 flex items-center">
+              <span className="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">
+                AI
+              </span>
+              AI-Enhanced Content Disclaimer
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              At HomeGeeni, some of our blog content is generated or enhanced
+              using artificial intelligence (AI) to provide timely, informative,
+              and engaging real estate insights. While we strive for accuracy,
+              AI-generated content may occasionally contain errors, outdated
+              information, or interpretations that don't reflect the views of
+              licensed professionals. All information should be independently
+              verified and does not constitute legal, financial, or real estate
+              advice. For personalized guidance, always consult a licensed real
+              estate agent, attorney, or financial advisor.
+            </p>
           </div>
         </div>
       </div>

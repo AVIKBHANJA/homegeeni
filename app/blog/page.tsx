@@ -33,11 +33,11 @@ export default async function BlogPage({
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Our <span className="text-primary">Home Improvement</span> Blog
+              Our <span className="text-primary">Real Estate</span> Blog
             </h1>
             <p className="text-xl text-gray-600 md:px-12">
-              Discover expert tips, maintenance guides, and innovative solutions
-              for your home transformation journey
+              Expert insights on buying, selling, investing, and market trends
+              powered by artificial intelligence
             </p>
           </div>
         </div>

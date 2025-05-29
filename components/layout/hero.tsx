@@ -13,13 +13,13 @@ export function Hero() {
         <div className="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
           <div className="w-full md:w-1/2 md:pr-10 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in">
-              Your Home Improvement{" "}
-              <span className="text-primary">Journey</span> Starts Here
+              Real Estate Powered by{" "}
+              <span className="text-primary">Artificial Intelligence</span>
             </h1>
 
             <p className="text-lg md:text-xl mb-8 text-gray-600 animate-fade-in-delay-1">
-              Design a personalized space, access expert guides, and experience
-              home transformation the way it should be.
+              Send offers, get instant valuations, manage docs & showings.
+              AI-assisted search for agents, buyers, and sellers.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2">
@@ -28,7 +28,7 @@ export function Hero() {
                   size="lg"
                   className="joy-btn joy-btn-primary rounded-full w-full sm:w-auto px-8"
                 >
-                  Get Started
+                  Explore AI Features
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -38,7 +38,7 @@ export function Hero() {
                   variant="outline"
                   className="joy-btn joy-btn-outline rounded-full w-full sm:w-auto px-8"
                 >
-                  Find Experts
+                  Get Instant Valuation
                 </Button>
               </Link>
             </div>
@@ -48,16 +48,16 @@ export function Hero() {
             <div className="relative bg-white p-3 rounded-2xl shadow-lg">
               <img
                 src="/placeholder.jpg"
-                alt="Beautiful Home"
+                alt="AI Real Estate Platform"
                 className="rounded-xl w-full h-auto"
               />
               {/* Floating card */}
               <div className="absolute -bottom-10 -left-5 bg-white p-5 rounded-xl shadow-lg max-w-[200px]">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-full mb-3">
-                  <span className="text-primary text-lg font-bold">✓</span>
+                  <span className="text-primary text-lg font-bold">AI</span>
                 </div>
                 <p className="text-sm font-medium text-gray-900">
-                  Expert guidance for all your home improvement needs
+                  Instant property valuations powered by machine learning
                 </p>
               </div>
             </div>
@@ -68,32 +68,32 @@ export function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24 animate-fade-in-delay-3">
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
             <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-              <span className="text-primary text-xl font-bold">1</span>
+              <span className="text-primary text-xl font-bold">AI</span>
             </div>
-            <h3 className="text-lg font-medium mb-2">Expert Content</h3>
+            <h3 className="text-lg font-medium mb-2">AI-Powered Valuations</h3>
             <p className="text-gray-600 text-sm">
-              Access professional guides and articles curated by industry
-              experts
+              Get instant, accurate property valuations using advanced machine
+              learning algorithms
             </p>
           </div>
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
             <div className="flex items-center justify-center w-12 h-12 bg-accent/10 rounded-full mb-4">
-              <span className="text-accent text-xl font-bold">2</span>
+              <span className="text-accent text-xl font-bold">$</span>
             </div>
-            <h3 className="text-lg font-medium mb-2">DIY Projects</h3>
+            <h3 className="text-lg font-medium mb-2">Automated Offers</h3>
             <p className="text-gray-600 text-sm">
-              Step-by-step tutorials to transform your living space with your
-              own hands
+              Send competitive offers instantly with AI-driven market analysis
+              and pricing strategies
             </p>
           </div>
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
             <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-              <span className="text-primary text-xl font-bold">3</span>
+              <span className="text-primary text-xl font-bold">🏠</span>
             </div>
-            <h3 className="text-lg font-medium mb-2">Professional Network</h3>
+            <h3 className="text-lg font-medium mb-2">Smart Search</h3>
             <p className="text-gray-600 text-sm">
-              Connect with qualified contractors and specialists for your home
-              projects
+              Find your perfect property with AI-assisted search that learns
+              your preferences
             </p>
           </div>
         </div>

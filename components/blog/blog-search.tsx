@@ -144,12 +144,19 @@ export function BlogSearch({
                       </SelectTrigger>
                       <SelectContent className="rounded-xl overflow-hidden">
                         <SelectItem value="all">All Categories</SelectItem>
-                        <SelectItem value="maintenance">Maintenance</SelectItem>
-                        <SelectItem value="renovation">Renovation</SelectItem>
-                        <SelectItem value="tips">Tips & Tricks</SelectItem>
-                        <SelectItem value="diy">DIY Projects</SelectItem>
-                        <SelectItem value="seasonal">Seasonal Care</SelectItem>
-                        <SelectItem value="smart-home">Smart Home</SelectItem>
+                        <SelectItem value="buying">Home Buying</SelectItem>
+                        <SelectItem value="selling">Home Selling</SelectItem>
+                        <SelectItem value="investing">
+                          Real Estate Investing
+                        </SelectItem>
+                        <SelectItem value="ai-insights">AI Insights</SelectItem>
+                        <SelectItem value="market-analysis">
+                          Market Analysis
+                        </SelectItem>
+                        <SelectItem value="market-trends">
+                          Market Trends
+                        </SelectItem>
+                        <SelectItem value="financing">Financing</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
